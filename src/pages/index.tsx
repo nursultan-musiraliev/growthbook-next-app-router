@@ -8,8 +8,9 @@ export default function Home() {
   const growthbook = useGrowthBook();
 
   useEffect(() => {
+    console.log("not ready", growthbook?.getAllResults());
     if (!growthbook?.ready) return;
-    console.log(growthbook?.getAllResults());
+    console.log("ready", growthbook?.getAllResults());
   }, [growthbook?.ready]);
 
   return (
